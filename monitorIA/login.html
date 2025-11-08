@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MonitorIA IFCE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuração para adicionar as cores do IFCE ao Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ifce-green': '#4A7729', // Verde principal da logo
+                        'ifce-red': '#A4202D',   // Vermelho do detalhe
+                        'ifce-dark': '#333333',  // Cinza escuro para textos
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
+        <!-- Logo -->
+        <img src="logo-ifce.jpg" alt="Logo do IFCE Campus Tianguá" class="mx-auto mb-6 h-24">
+        
+        <h1 class="text-2xl font-bold text-ifce-dark mb-6">MonitorIA - Acesso</h1>
+        
+        <form action="question.html">
+            <div class="mb-4 text-left">
+                <label for="email" class="block text-gray-700 font-bold mb-2">E-mail Institucional</label>
+                <input type="email" id="email" placeholder="seu.email@aluno.ifce.edu.br" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ifce-green">
+            </div>
+            
+            <div class="mb-6 text-left">
+                <label for="senha" class="block text-gray-700 font-bold mb-2">Senha</label>
+                <input type="password" id="senha" placeholder="Sua senha" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ifce-green">
+            </div>
+            
+            <button type="submit" class="w-full bg-ifce-green text-white font-bold py-3 px-4 rounded-lg hover:bg-green-800 transition duration-300">
+                Entrar
+            </button>
+            
+            <a href="#" class="block text-center text-ifce-green hover:underline mt-4">
+                Esqueceu sua senha?
+            </a>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Pergunta - MonitorIA IFCE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ifce-green': '#4A7729',
+                        'ifce-red': '#A4202D',
+                        'ifce-dark': '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Cabeçalho Fixo -->
+    <header class="bg-ifce-green shadow-md sticky top-0">
+        <div class="container mx-auto max-w-5xl px-4">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-4">
+                    <img src="logo-ifce.jpg" alt="Logo IFCE" class="h-12 bg-white p-1 rounded-md">
+                    <h1 class="text-2xl font-bold text-white">MonitorIA</h1>
+                </div>
+                <a href="perguntas.html" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 transition duration-300">
+                    Voltar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto max-w-5xl p-4 mt-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-ifce-dark mb-6">Faça uma Nova Pergunta</h2>
+            <!-- Formulário -->
+            <form action="question.html">
+                <div class="mb-4">
+                    <label for="titulo" class="block text-gray-700 font-bold mb-2">Título</label>
+                    <input type="text" id="titulo" placeholder="Seja específico e imagine que você está fazendo a pergunta para outra pessoa" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ifce-green">
+                </div>
+
+                <div class="mb-4">
+                    <label for="corpo" class="block text-gray-700 font-bold mb-2">Corpo da Pergunta</label>
+                    <textarea id="corpo" rows="8" placeholder="Inclua toda a informação necessária para que alguém possa responder sua pergunta..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ifce-green"></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label for="tags" class="block text-gray-700 font-bold mb-2">Tópicos (separados por vírgula )</label>
+                    <input type="text" id="tags" placeholder="Ex: Cálculo, Álgebra Linear, Programação I" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-ifce-green">
+                </div>
+
+                <button type="submit" class="w-full bg-ifce-green text-white font-bold py-3 px-4 rounded-lg hover:bg-green-800 transition duration-300">
+                    Publicar Pergunta
+                </button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
